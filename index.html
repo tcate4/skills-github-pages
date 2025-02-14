@@ -3,26 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow">
-    <title>Tee Off Golf: Your Ultimate Golf Blog Experience</title>
-    <!-- Link to your main stylesheet (ensure this file exists) -->
+    <title>Tee Off Golf - Home</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
-      <h1>Welcome to Tee Off Golf</h1>
-      <!-- Navigation and other header elements -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Tee Off Golf</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section>
-        <p>This is your new simplified homepage content.</p>
-        <!-- Additional content -->
-      </section>
-    </main>
+
+    <!-- Hero Section with background image -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Welcome to Tee Off Golf</h1>
+        <p>
+          Your ultimate golf blog for tips, reviews, and stunning golf course
+          experiences.
+        </p>
+        <a href="blog.html" class="btn">Explore Golf Tips</a>
+      </div>
+    </section>
+
     <footer>
       <p>&copy; 2025 Tee Off Golf. All rights reserved.</p>
     </footer>
-    <!-- Link to your main JavaScript file if needed -->
+
     <script src="js/script.js"></script>
   </body>
 </html>
