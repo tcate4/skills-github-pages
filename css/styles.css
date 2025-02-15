@@ -1,4 +1,5 @@
-/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,24 +7,25 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  background: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-/* Navbar styling */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2e7d32; /* Dark green */
+  background: #222;
   padding: 1rem 2rem;
 }
 
 .navbar .logo a {
-  color: #fff;
+  color: #f0c14b;
   font-size: 1.8rem;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -37,21 +39,22 @@ body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #ddd;
   text-decoration: none;
-  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.nav-links a.active,
-.nav-links a:hover {
-  color: #ffcc00;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f0c14b;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
   height: 80vh;
-  background: url('../images/golf-hero.jpg') no-repeat center center/cover;
+  background: url('../images/augusta.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +67,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(46, 125, 50, 0.6); /* semi-transparent dark green */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -75,121 +78,143 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .btn {
-  background: #ffcc00;
-  color: #333;
-  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  background: #f0c14b;
+  color: #222;
+  padding: 0.8rem 2rem;
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-  background: #e6b800;
+  background: #d1a534;
+  transform: translateY(-2px);
+}
+
+/* Sections common styling */
+section {
+  padding: 3rem 1rem;
 }
 
 /* About Section */
 .about {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
+  align-items: center;
   background: #fff;
-  margin: 2rem auto;
-  max-width: 1000px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .about-image {
   flex: 1 1 40%;
-  padding: 1rem;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 4px;
+  height: auto;
+  display: block;
 }
 
 .about-text {
   flex: 1 1 60%;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .about-text h1 {
   margin-bottom: 1rem;
-  color: #2e7d32;
+  color: #222;
+  font-size: 2.5rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #555;
 }
 
 /* Blog Posts */
 .blog-posts {
   max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .blog-posts h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #2e7d32;
+  font-size: 2.5rem;
+  color: #222;
 }
 
 .post {
   background: #fff;
   margin-bottom: 2rem;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .post img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .post h2 {
-  padding: 1rem;
-  color: #2e7d32;
+  padding: 1.5rem;
+  color: #222;
+  font-size: 1.8rem;
 }
 
 .post p {
-  padding: 0 1rem 1rem;
+  padding: 0 1.5rem 1.5rem;
+  color: #555;
+  font-size: 1rem;
 }
 
 .post .btn {
-  margin: 1rem;
-  display: inline-block;
+  margin: 1rem 1.5rem 2rem;
 }
 
 /* Contact Form */
 .contact {
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 0 auto;
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
 }
 
 .contact h1 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #2e7d32;
+  color: #222;
+  font-size: 2rem;
 }
 
 .contact form label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
 }
 
 .contact form input,
@@ -199,30 +224,33 @@ body {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 .contact form button {
   width: 100%;
   padding: 0.8rem;
-  background: #2e7d32;
+  background: #222;
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .contact form button:hover {
-  background: #27632a;
+  background: #444;
 }
 
 /* Footer */
 footer {
-  background: #2e7d32;
-  color: #fff;
+  background: #222;
+  color: #ddd;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
 }
 
 /* Responsive Styles */
@@ -230,13 +258,17 @@ footer {
   .about {
     flex-direction: column;
   }
-
   .nav-links {
     flex-direction: column;
     margin-top: 1rem;
   }
-
   .nav-links li {
     margin: 0.5rem 0;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
   }
 }
